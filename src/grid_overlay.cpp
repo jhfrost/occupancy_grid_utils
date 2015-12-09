@@ -66,14 +66,6 @@ inline gm::Point transformPt (const tf::Pose& trans, const gm::Point32& p)
   return transformed;
 }
 
-inline double euclideanDistance (const gm::Point& p1, const gm::Point& p2)
-{
-  const double dx=p1.x-p2.x;
-  const double dy=p1.y-p2.y;
-  const double dz=p1.z-p2.z;
-  return sqrt(dx*dx + dy*dy + dz*dz);
-}
-
 
 // This is our policy for computing the occupancy of a cell based on hit and pass through counts
 inline int8_t determineOccupancy (const unsigned hit_count, const unsigned pass_through_count, 
